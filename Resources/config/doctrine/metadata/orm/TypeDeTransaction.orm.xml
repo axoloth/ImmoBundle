@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TypeDeTransaction" table="type_de_transaction">
+    <indexes>
+      <index name="fb_order_libelle_type_transaction_INDEX" columns="libelle_type_transaction"/>
+      <index name="fb_order_actif_type_transaction_INDEX" columns="actif_type_transaction"/>
+      <index name="fb_order_ordre_type_transaction_INDEX" columns="ordre_type_transaction"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelleTypeTransaction" type="string" column="libelle_type_transaction" length="255" nullable="true"/>
+    <field name="actifTypeTransaction" type="boolean" column="actif_type_transaction" nullable="true"/>
+    <field name="ordreTypeTransaction" type="integer" column="ordre_type_transaction" nullable="true"/>
+  </entity>
+</doctrine-mapping>

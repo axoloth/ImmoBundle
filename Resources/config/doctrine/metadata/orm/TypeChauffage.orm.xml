@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TypeChauffage" table="type_chauffage">
+    <indexes>
+      <index name="fb_order_libelle_type_chauffage_INDEX" columns="libelle_type_chauffage"/>
+      <index name="fb_order_actif_type_chauffage_INDEX" columns="actif_type_chauffage"/>
+      <index name="fb_order_ordre_type_chauffage_INDEX" columns="ordre_type_chauffage"/>
+      <index name="Index_5" columns="code_aptalis"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelleTypeChauffage" type="string" column="libelle_type_chauffage" length="255" nullable="true"/>
+    <field name="actifTypeChauffage" type="boolean" column="actif_type_chauffage" nullable="false"/>
+    <field name="ordreTypeChauffage" type="string" column="ordre_type_chauffage" length="3" nullable="true"/>
+    <field name="codeAptalis" type="string" column="code_aptalis" length="20" nullable="true"/>
+  </entity>
+</doctrine-mapping>

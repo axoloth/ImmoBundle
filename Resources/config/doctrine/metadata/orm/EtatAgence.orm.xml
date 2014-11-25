@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EtatAgence" table="etat_agence">
+    <indexes>
+      <index name="fb_order_libelle_etat_agence_INDEX" columns="libelle_etat_agence"/>
+      <index name="fb_order_actif_etat_agence_INDEX" columns="actif_etat_agence"/>
+      <index name="fb_order_ordre_etat_agence_INDEX" columns="ordre_etat_agence"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelleEtatAgence" type="string" column="libelle_etat_agence" length="255" nullable="true"/>
+    <field name="actifEtatAgence" type="boolean" column="actif_etat_agence" nullable="true"/>
+    <field name="ordreEtatAgence" type="integer" column="ordre_etat_agence" nullable="true"/>
+  </entity>
+</doctrine-mapping>

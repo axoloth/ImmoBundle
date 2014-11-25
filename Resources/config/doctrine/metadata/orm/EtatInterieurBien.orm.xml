@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EtatInterieurBien" table="etat_interieur_bien">
+    <indexes>
+      <index name="fb_order_Libelle_INDEX" columns="Libelle"/>
+      <index name="Index_3" columns="code_aptalis"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelle" type="string" column="Libelle" length="255" nullable="true"/>
+    <field name="codeAptalis" type="string" column="code_aptalis" length="20" nullable="true"/>
+  </entity>
+</doctrine-mapping>

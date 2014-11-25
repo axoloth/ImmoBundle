@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TypeDeBien" table="type_de_bien">
+    <indexes>
+      <index name="fb_order_libelle_type_bien_INDEX" columns="libelle_type_bien"/>
+      <index name="fb_order_actif_type_bien_INDEX" columns="actif_type_bien"/>
+      <index name="fb_order_ordre_type_bien_INDEX" columns="ordre_type_bien"/>
+      <index name="Index_5" columns="code_aptalis"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelleTypeBien" type="string" column="libelle_type_bien" length="255" nullable="true"/>
+    <field name="actifTypeBien" type="boolean" column="actif_type_bien" nullable="false"/>
+    <field name="ordreTypeBien" type="integer" column="ordre_type_bien" nullable="true"/>
+    <field name="codeAptalis" type="string" column="code_aptalis" length="20" nullable="true"/>
+  </entity>
+</doctrine-mapping>

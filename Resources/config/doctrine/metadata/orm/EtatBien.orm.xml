@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EtatBien" table="etat_bien">
+    <indexes>
+      <index name="fb_order_libelle_etat_bien_INDEX" columns="libelle_etat_bien"/>
+      <index name="fb_order_actif_etat_bien_INDEX" columns="actif_etat_bien"/>
+      <index name="fb_order_ordre_etat_bien_INDEX" columns="ordre_etat_bien"/>
+      <index name="Index_5" columns="code_aptalis"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelleEtatBien" type="string" column="libelle_etat_bien" length="255" nullable="true"/>
+    <field name="actifEtatBien" type="boolean" column="actif_etat_bien" nullable="false"/>
+    <field name="ordreEtatBien" type="integer" column="ordre_etat_bien" nullable="true"/>
+    <field name="codeAptalis" type="string" column="code_aptalis" length="20" nullable="true"/>
+  </entity>
+</doctrine-mapping>

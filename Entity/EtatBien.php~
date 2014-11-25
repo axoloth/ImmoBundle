@@ -1,0 +1,60 @@
+<?php
+
+namespace Axoloth\ImmoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EtatBien
+ *
+ * @ORM\Table(name="etat_bien", indexes={@ORM\Index(name="fb_order_libelle_etat_bien_INDEX", columns={"libelle_etat_bien"}), @ORM\Index(name="fb_order_actif_etat_bien_INDEX", columns={"actif_etat_bien"}), @ORM\Index(name="fb_order_ordre_etat_bien_INDEX", columns={"ordre_etat_bien"}), @ORM\Index(name="Index_5", columns={"code_aptalis"})})
+ * @ORM\Entity
+ */
+class EtatBien
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_time", type="datetime", nullable=true)
+     */
+    private $dateTime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelle_etat_bien", type="string", length=255, nullable=true)
+     */
+    private $libelleEtatBien;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="actif_etat_bien", type="boolean", nullable=false)
+     */
+    private $actifEtatBien = '1';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ordre_etat_bien", type="integer", nullable=true)
+     */
+    private $ordreEtatBien;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code_aptalis", type="string", length=20, nullable=true)
+     */
+    private $codeAptalis;
+
+
+}

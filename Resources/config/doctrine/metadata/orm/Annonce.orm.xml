@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Annonce" table="annonce">
+    <indexes>
+      <index name="fb_order_texte_INDEX" columns="texte"/>
+      <index name="fb_order_type_transaction_id_INDEX" columns="type_transaction_id"/>
+      <index name="fb_order_type_de_bien_id_INDEX" columns="type_de_bien_id"/>
+      <index name="fb_groupbyorder_date_time_INDEX" columns="date_time"/>
+      <index name="fb_order_titre_annonce_INDEX" columns="titre_annonce"/>
+      <index name="fb_order_reference_annonce_INDEX" columns="reference_annonce"/>
+      <index name="fb_order_ville_annonce_INDEX" columns="ville_annonce"/>
+      <index name="fb_order_departement_annonce_INDEX" columns="departement_annonce"/>
+      <index name="fb_order_prix_annonce_INDEX" columns="prix_annonce"/>
+      <index name="fb_order_surface_habitable_annonce_INDEX" columns="surface_habitable_annonce"/>
+      <index name="fb_order_surface_terrain_annone_INDEX" columns="surface_terrain_annone"/>
+      <index name="fb_order_modeChauffage_id_INDEX" columns="modeChauffage_id"/>
+      <index name="fb_order_dpe_valeur_INDEX" columns="dpe_valeur"/>
+      <index name="fb_order_ges_valeur_INDEX" columns="ges_valeur"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="texte" type="text" column="texte" nullable="true"/>
+    <field name="typeTransactionId" type="integer" column="type_transaction_id" nullable="true"/>
+    <field name="typeDeBienId" type="integer" column="type_de_bien_id" nullable="true"/>
+    <field name="referenceAnnonce" type="string" column="reference_annonce" length="20" nullable="true"/>
+    <field name="titreAnnonce" type="text" column="titre_annonce" nullable="true"/>
+    <field name="villeAnnonce" type="string" column="ville_annonce" length="255" nullable="true"/>
+    <field name="departementAnnonce" type="string" column="departement_annonce" length="2" nullable="true"/>
+    <field name="quartierAnnonce" type="string" column="quartier_annonce" length="255" nullable="true"/>
+    <field name="coupCoeurAnnonce" type="boolean" column="coup_coeur_annonce" nullable="true"/>
+    <field name="prixAnnonce" type="string" column="prix_annonce" length="20" nullable="true"/>
+    <field name="chargeAnnonce" type="string" column="charge_annonce" length="255" nullable="true"/>
+    <field name="honoraireAnnonce" type="string" column="honoraire_annonce" length="255" nullable="true"/>
+    <field name="nbPieces" type="string" column="nb_pieces" length="3" nullable="true"/>
+    <field name="nbSalleBain" type="string" column="nb_salle_bain" length="2" nullable="true"/>
+    <field name="nbWc" type="string" column="nb_wc" length="2" nullable="true"/>
+    <field name="typeChauffageId" type="integer" column="type_chauffage_id" nullable="true"/>
+    <field name="systemEauChaudeId" type="integer" column="system_eau_chaude_id" nullable="true"/>
+    <field name="sloganId" type="integer" column="slogan_id" nullable="true"/>
+    <field name="surfaceHabitableAnnonce" type="string" column="surface_habitable_annonce" length="255" nullable="true"/>
+    <field name="surfaceTerrainAnnone" type="string" column="surface_terrain_annone" length="255" nullable="true"/>
+    <field name="etatBienId" type="integer" column="etat_bien_id" nullable="true"/>
+    <field name="etatAgenceId" type="integer" column="etat_agence_id" nullable="true"/>
+    <field name="annonceNatureCharge" type="string" column="annonce_nature_charge" length="255" nullable="true"/>
+    <field name="dpe" type="string" column="dpe" length="255" nullable="true"/>
+    <field name="ges" type="string" column="ges" length="255" nullable="true"/>
+    <field name="modechauffageId" type="integer" column="modeChauffage_id" nullable="true"/>
+    <field name="etatInterieurBienId" type="integer" column="etat_interieur_bien_id" nullable="true"/>
+    <field name="dpeValeur" type="string" column="dpe_valeur" length="255" nullable="true"/>
+    <field name="gesValeur" type="string" column="ges_valeur" length="255" nullable="true"/>
+    <field name="sousTypeBienId" type="integer" column="sous_type_bien_id" nullable="true"/>
+    <field name="nbChambre" type="string" column="nb_chambre" length="3" nullable="true"/>
+    <field name="prixMetreCarre" type="string" column="prix_metre_carre" length="20" nullable="true"/>
+    <field name="codePostal" type="string" column="code_postal" length="6" nullable="true"/>
+    <field name="exclusivite" type="string" column="exclusivite" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

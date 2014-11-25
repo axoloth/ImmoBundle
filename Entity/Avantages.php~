@@ -1,0 +1,60 @@
+<?php
+
+namespace Axoloth\ImmoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Avantages
+ *
+ * @ORM\Table(name="avantages", indexes={@ORM\Index(name="fb_order_libelle_avantage_INDEX", columns={"libelle_avantage"}), @ORM\Index(name="fb_order_ordre_avantage_INDEX", columns={"ordre_avantage"}), @ORM\Index(name="fb_order_actif_avantage_INDEX", columns={"actif_avantage"})})
+ * @ORM\Entity
+ */
+class Avantages
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_time", type="datetime", nullable=true)
+     */
+    private $dateTime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelle_avantage", type="string", length=255, nullable=true)
+     */
+    private $libelleAvantage;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ordre_avantage", type="string", length=3, nullable=true)
+     */
+    private $ordreAvantage;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="icone_avantage", type="text", nullable=true)
+     */
+    private $iconeAvantage;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="actif_avantage", type="boolean", nullable=true)
+     */
+    private $actifAvantage;
+
+
+}

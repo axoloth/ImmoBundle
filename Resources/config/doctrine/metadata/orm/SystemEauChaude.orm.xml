@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SystemEauChaude" table="system_eau_chaude">
+    <indexes>
+      <index name="fb_order_libelle_system_eau_chaude_INDEX" columns="libelle_system_eau_chaude"/>
+      <index name="fb_order_actif_system_eau_chaude_INDEX" columns="actif_system_eau_chaude"/>
+      <index name="fb_order_ordre_eau_chaude_INDEX" columns="ordre_eau_chaude"/>
+      <index name="Index_5" columns="code_aptalis"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelleSystemEauChaude" type="string" column="libelle_system_eau_chaude" length="255" nullable="true"/>
+    <field name="actifSystemEauChaude" type="boolean" column="actif_system_eau_chaude" nullable="false"/>
+    <field name="ordreEauChaude" type="string" column="ordre_eau_chaude" length="3" nullable="true"/>
+    <field name="codeAptalis" type="string" column="code_aptalis" length="20" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,46 @@
+<?php
+
+namespace Axoloth\ImmoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AnnoncesAvantages
+ *
+ * @ORM\Table(name="annonces_avantages", indexes={@ORM\Index(name="fb_groupby_avantage_id_INDEX", columns={"avantage_id"})})
+ * @ORM\Entity
+ */
+class AnnoncesAvantages
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_time", type="datetime", nullable=true)
+     */
+    private $dateTime;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="annonce_id", type="integer", nullable=true)
+     */
+    private $annonceId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="avantage_id", type="integer", nullable=true)
+     */
+    private $avantageId;
+
+
+}

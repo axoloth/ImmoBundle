@@ -1,0 +1,3 @@
+axoloth_immo_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AxolothImmoBundle:Default:index }

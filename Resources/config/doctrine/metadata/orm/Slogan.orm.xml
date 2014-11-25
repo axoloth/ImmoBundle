@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Slogan" table="slogan">
+    <indexes>
+      <index name="fb_order_libelle_slogan_INDEX" columns="libelle_slogan"/>
+      <index name="fb_order_actif_slogan_INDEX" columns="actif_slogan"/>
+      <index name="fb_order_ordre_slogan_INDEX" columns="ordre_slogan"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="true"/>
+    <field name="libelleSlogan" type="string" column="libelle_slogan" length="255" nullable="true"/>
+    <field name="actifSlogan" type="boolean" column="actif_slogan" nullable="true"/>
+    <field name="ordreSlogan" type="integer" column="ordre_slogan" nullable="true"/>
+  </entity>
+</doctrine-mapping>

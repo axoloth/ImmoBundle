@@ -1,0 +1,53 @@
+<?php
+
+namespace Axoloth\ImmoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EtatAgence
+ *
+ * @ORM\Table(name="etat_agence", indexes={@ORM\Index(name="fb_order_libelle_etat_agence_INDEX", columns={"libelle_etat_agence"}), @ORM\Index(name="fb_order_actif_etat_agence_INDEX", columns={"actif_etat_agence"}), @ORM\Index(name="fb_order_ordre_etat_agence_INDEX", columns={"ordre_etat_agence"})})
+ * @ORM\Entity
+ */
+class EtatAgence
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_time", type="datetime", nullable=true)
+     */
+    private $dateTime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelle_etat_agence", type="string", length=255, nullable=true)
+     */
+    private $libelleEtatAgence;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="actif_etat_agence", type="boolean", nullable=true)
+     */
+    private $actifEtatAgence;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ordre_etat_agence", type="integer", nullable=true)
+     */
+    private $ordreEtatAgence;
+
+
+}

@@ -1,0 +1,74 @@
+<?php
+
+namespace Axoloth\ImmoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Photos
+ *
+ * @ORM\Table(name="photos")
+ * @ORM\Entity
+ */
+class Photos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_time", type="datetime", nullable=true)
+     */
+    private $dateTime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ordre_photo", type="string", length=3, nullable=true)
+     */
+    private $ordrePhoto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="text", nullable=true)
+     */
+    private $photo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="annonce_id", type="integer", nullable=true)
+     */
+    private $annonceId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="traitementFait", type="string", length=1, nullable=false)
+     */
+    private $traitementfait = 'N';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=false)
+     */
+    private $url;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="originale", type="string", length=255, nullable=false)
+     */
+    private $originale;
+
+
+}

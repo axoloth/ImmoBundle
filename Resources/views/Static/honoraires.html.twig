@@ -1,0 +1,155 @@
+{% extends 'AxolothImmoBundle::base.html.twig' %}
+{%block body%}							
+
+	<h2 class="art-PostHeaderIcon-wrapper"><img src="{{ asset('bundles/axolothimmo/images/PostHeaderIcon.png') }}" alt="PostHeaderIcon" width="32" height="32" />
+		<span class="art-PostHeader">
+			Honoraires
+		</span>
+	</h2>
+
+	<div class="art-PostMetadataHeader">
+		<div class="art-PostHeaderIcons art-metadata-icons">
+			<span class="art-metadata-icons"><a href="/honoraires?format=pdf" title="PDF" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><img src="{{ asset('bundles/axolothimmo/images/pdf_button.png') }}" alt="PDF"  /></a>&nbsp;<a href="/honoraires?tmpl=component&amp;print=1&amp;page=" title="Imprimer" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><img src="{{ asset('bundles/axolothimmo/images/printButton.png') }}" alt="Imprimer"  /></a>&nbsp;<a href="/component/mailto/?tmpl=component&amp;link=aHR0cDovL3d3dy5pbW1vLWxpbW91c2luLmNvbS9ob25vcmFpcmVz" title="email" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;"><img src="{{ asset('bundles/axolothimmo/images/emailButton.png') }}" alt="email"  /></a></span>
+		</div>
+	</div>
+	
+	<div class="art-PostContent">
+		<div class="art-article">
+				<p>Dans le cadre d’un <strong>mandat exclusif de vente</strong> (<em>honoraires réduits).</em></p>
+
+				<table border="1" cellspacing="0" cellpadding="2" align="center">
+					<tbody>
+						<tr>
+							<td style="text-align: center; background-color: #e5dccd; width: 307px;" valign="top">
+								<p><strong>Prix net vendeur</strong></p>
+							</td>
+							<td style="background-color: #e5dccd; width: 307px;" valign="top">
+								<p style="text-align: center;"><strong>Honoraires</strong></p>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td width="307" valign="top">
+								<p>0   – 200 000€</p>
+							</td>
+							<td width="307" valign="top">
+								<p>6%</p>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td width="307" valign="top">
+								<p>&gt;   200 000€</p>
+							</td>
+							<td width="307" valign="top">
+								<p>4%</p>
+							</td>
+						</tr>
+					</tbody>
+						
+				</table>
+						
+				<p> </p>
+						
+				<p>Dans le cadre d’un <strong>mandat simple de vente</strong> :</p>
+						
+				<table border="1" cellspacing="0" cellpadding="2">
+					<tbody>
+						<tr>
+							<td style="background-color: #e5dccd; width: 307px;" valign="top">
+								<p style="text-align: center;"><strong>Prix   net vendeur</strong></p>
+							</td>
+							<td style="background-color: #e5dccd; width: 307px;" valign="top">
+								<p style="text-align: center;"><strong>Horaires</strong></p>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td width="307" valign="top">
+								<p>&lt;   40 000€</p>
+							</td>
+							<td width="307" valign="top">
+								<p>9.5%   avec un minimum de 1800€</p>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td width="307" valign="top">
+								<p>41 000€   - 150 000€</p>
+							</td>
+							<td width="307" valign="top">
+								<p>8%</p>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td width="307" valign="top">
+								<p>151 000€   - 200 000€</p>
+							</td>
+							<td width="307" valign="top">
+								<p>7%</p>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td width="307" valign="top">
+								<p>201 000€   - 300 000€</p>
+							</td>
+							<td width="307" valign="top">
+								<p>5%</p>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td width="307" valign="top">
+								<p>&gt;300 000€</p>
+							</td>
+							<td width="307" valign="top">
+								<p>4%</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p> </p>
+
+				<p>Dans le cas d’un <strong><a href="/component/fabrik/?view=form&amp;fabrik=15&amp;random=0" title="Mandat de recherche">mandat de recherche</a> :</strong></p>
+				<p>5% avec un minimum de 5000€ pour les biens bâtis</p>
+				<p>10% pour les terrains</p>
+				<p> </p>
+				<p>Dans le cadre d’un<strong> mandat de location </strong>:</p>
+				<p>10% du loyer annuel TTC</p>
+				<p>Selon la loi du 6 juillet 1989, les honoraires sont à partager par moitié entre le locataire et le bailleur.</p>
+				<p> </p>
+				<p>Dans le cadre d’une <strong>estimation sans mise en vente</strong> (exemple : pour succession, partage …) envoi du courrier au(x) demandeur(s) et notaires.</p>
+
+				<table border="1" cellspacing="0" cellpadding="2">
+					<tbody>
+						<tr>
+							<td style="text-align: center; background-color: #e5dccd;"><strong>Forfaits</strong></td>
+						</tr>
+						<tr>
+							<td width="614" valign="top">
+								<p>90€ TTC pour les biens situés sur les communes dont les codes postaux sont   19210 et 19230</p>
+							</td>
+						</tr>
+						<tr>
+							<td width="614" valign="top">
+								<p>120€ TTC pour les biens situés sur les autres communes</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<span class="article_separator">&nbsp;</span>
+	
+	</div>
+	
+	<div class="cleared"></div>
+
+		<div class="art-Post">
+		<div class="art-Post-body">
+			<div class="art-Post-inner">
+
+				<div class="art-PostContent"></div>
+
+				<div class="cleared"></div>
+			</div>
+		</div>
+	</div>
+{%endblock body%}
